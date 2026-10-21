@@ -45,4 +45,5 @@ export const routes = [
   { path: "/manufacturing/", load: () => import('./pages/manufacturing.jsx') },
   { path: "/enterprise/", load: () => import('./pages/enterprise.jsx') },
   { path: "/retail/", load: () => import('./pages/retail.jsx') },
+  { path: "/brochures/", load: () => import('./pages/brochures.jsx') },
 ];

@@ -7,8 +7,16 @@
         /**-----------------------------
          *  Navbar fix
          * ---------------------------*/
+        // Parent items only act as dropdown triggers when they have no real link ("#").
+        // Parents that point to a page (Managed Services, Industries, Contact) navigate on desktop.
+        // On mobile the first tap opens the submenu and the second tap opens the page.
         $(document).on('click', '.navbar-area .navbar-nav li.menu-item-has-children>a', function(e) {
-            e.preventDefault();
+            var href = $(this).attr('href');
+            if (!href || href === '#') { e.preventDefault(); return; }
+            if ($(window).width() < 992 && $(this).siblings('.sub-menu').length && !$(this).data('tapped')) {
+                e.preventDefault();
+                $(this).data('tapped', true);
+            }
         });
 
         $('.s7t-header-menu').on('click', function(e) {

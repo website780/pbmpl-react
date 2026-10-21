@@ -75,3 +75,11 @@
   .svc a.svc-btn { padding: 16px 30px; font-size: 18px; }
   .svc .svc-card { padding: 22px; }
 }
+
+/* Brochures & Flyers page */
+.svc .bro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.svc .bro-card { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding: 30px; background: #fff; border: 1px solid #ecdfe9; border-radius: 16px; box-shadow: 0 8px 28px rgba(113, 14, 92, .06); }
+.svc .bro-type { font: 500 15px/1 Rajdhani, sans-serif; letter-spacing: 3px; text-transform: uppercase; color: #710e5c; }
+.svc h3.bro-title { flex: 1; margin: 0 0 12px; font: 700 26px/1.2 Rajdhani, sans-serif; color: #202020; }
+@media (max-width: 991px) { .svc .bro-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 575px) { .svc .bro-grid { grid-template-columns: 1fr; } }

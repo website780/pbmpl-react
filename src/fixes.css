@@ -12,3 +12,9 @@
 .clients-strip a.clients-strip__btn:hover { background: #8f1d7b; color: #fff; transform: translateY(-2px); }
 @media (max-width: 991px) { .clients-strip .clients-strip__grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
 @media (max-width: 575px) { .clients-strip .clients-strip__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } .clients-strip .clients-strip__card { padding: 12px; } }
+
+/* Header menu: keep all 7 items on one row on small laptops (it wrapped and hid the first row) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-area ul.navbar-nav > li { margin-left: 2px; margin-right: 4px; padding-left: 4px; }
+  .navbar-area ul.navbar-nav > li > a { font-size: 14px; }
+}
