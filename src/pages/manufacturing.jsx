@@ -50,10 +50,6 @@ export const page = {
    "id": "wp-img-auto-sizes-contain-inline-css"
   },
   {
-   "href": "/assets/css/plugins/blog.css",
-   "id": "blog-post-css-css"
-  },
-  {
    "href": "/assets/vendor/elementor/lib/font-awesome/css/all.min.css",
    "id": "font-awesome-5-all-css"
   },
@@ -372,9 +368,6 @@ export const page = {
   },
   {
    "src": "/assets/js/theme/sliderpost.js"
-  },
-  {
-   "src": "/assets/js/theme/blogslider.js"
   },
   {
    "src": "/assets/js/theme/serviceslider.js"

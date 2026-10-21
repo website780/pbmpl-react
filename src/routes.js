@@ -3,17 +3,14 @@ import { lazy } from 'react';
 
 export const routes = [
   { path: "/", load: () => import('./pages/home.jsx') },
-  { path: "/blog/", load: () => import('./pages/blog.jsx') },
   { path: "/team/", load: () => import('./pages/team.jsx') },
   { path: "/about/", load: () => import('./pages/about.jsx') },
   { path: "/ai-iot/", load: () => import('./pages/ai-iot.jsx') },
   { path: "/careers/", load: () => import('./pages/careers.jsx') },
   { path: "/clients/", load: () => import('./pages/clients.jsx') },
   { path: "/contact/", load: () => import('./pages/contact.jsx') },
-  { path: "/pricing/", load: () => import('./pages/pricing.jsx') },
   { path: "/approach/", load: () => import('./pages/approach.jsx') },
   { path: "/industry/", load: () => import('./pages/industry.jsx') },
-  { path: "/services/", load: () => import('./pages/services.jsx') },
   { path: "/hpe-greenlake/", load: () => import('./pages/hpe-greenlake.jsx') },
   { path: "/nutanix-cloud/", load: () => import('./pages/nutanix-cloud.jsx') },
   { path: "/audit-services/", load: () => import('./pages/audit-services.jsx') },
