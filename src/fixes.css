@@ -1,0 +1,2 @@
+/* Fixes for layout bugs inherited from the original site */
+.blog-details-content .blog-thumb-full img { object-fit: cover; }
