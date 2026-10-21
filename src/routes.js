@@ -43,4 +43,8 @@ export const routes = [
   { path: "/enterprise/", load: () => import('./pages/enterprise.jsx') },
   { path: "/retail/", load: () => import('./pages/retail.jsx') },
   { path: "/brochures/", load: () => import('./pages/brochures.jsx') },
+  { path: "/data-centre/", load: () => import('./pages/data-centre.jsx') },
+  { path: "/servers-storage/", load: () => import('./pages/servers-storage.jsx') },
+  { path: "/networking-wifi/", load: () => import('./pages/networking-wifi.jsx') },
+  { path: "/education-technology/", load: () => import('./pages/education-technology.jsx') },
 ];

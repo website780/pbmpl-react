@@ -27,7 +27,7 @@ export function ServiceBanner({ bg, name, sub, slug }) {
         <div className="row justify-content-center">
           <div className="col-sm-12 text-left">
             <h3 className="title">{name}</h3>
-            <p>{sub}</p>
+            {sub ? <p>{sub}</p> : null}
           </div>
           <div className="col-sm-12 text-left">
             <ul className="breadcrumb">
