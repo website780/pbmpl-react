@@ -1,1 +1,27 @@
+# dependencies
 node_modules
+
+# build output (regenerate with `npm run build`)
+dist
+
+# vite cache
+.vite
+node_modules/.vite
+
+# logs
+*.log
+npm-debug.log*
+
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+
+# Claude Code local files
+.claude/settings.local.json
