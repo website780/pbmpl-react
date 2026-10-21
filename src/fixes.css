@@ -18,3 +18,21 @@
   .navbar-area ul.navbar-nav > li { margin-left: 2px; margin-right: 4px; padding-left: 4px; }
   .navbar-area ul.navbar-nav > li > a { font-size: 14px; }
 }
+
+/* Awards & Certificates: click a certificate to read it (components/CertLightbox.jsx) */
+.image-flip-container, .pbmpl-flip-container, .pbmpl-2-flip-container { cursor: zoom-in; }
+/* no hover flip: the lightbox shows every page */
+.image-flip-container:hover .image-flip-card,
+.pbmpl-flip-container:hover .pbmpl-flip-card,
+.pbmpl-2-flip-container:hover .pbmpl-2-flip-card { transform: none; }
+.cert-lb { position: fixed; inset: 0; z-index: 100000; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(10, 8, 16, .88); cursor: zoom-out; }
+.cert-lb .cert-lb__fig { margin: 0; max-width: 92vw; max-height: 94vh; display: flex; flex-direction: column; align-items: center; cursor: default; }
+.cert-lb .cert-lb__fig img { display: block; max-width: 92vw; max-height: calc(94vh - 44px); width: auto; height: auto; object-fit: contain; background: #fff; border-radius: 6px; box-shadow: 0 10px 40px rgba(0, 0, 0, .5); }
+.cert-lb figcaption { margin-top: 10px; color: #fff; font: 600 18px/1.3 Rajdhani, sans-serif; text-align: center; }
+.cert-lb button { border: 0; background: rgba(255, 255, 255, .14); color: #fff; cursor: pointer; transition: background .2s; }
+.cert-lb button:hover { background: rgba(255, 255, 255, .3); }
+.cert-lb .cert-lb__close { position: absolute; top: 16px; right: 20px; width: 46px; height: 46px; border-radius: 50%; font-size: 30px; line-height: 1; }
+.cert-lb .cert-lb__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 64px; border-radius: 10px; font-size: 22px; }
+.cert-lb .cert-lb__prev { left: 14px; }
+.cert-lb .cert-lb__next { right: 14px; }
+@media (max-width: 575px) { .cert-lb { padding: 10px; } .cert-lb .cert-lb__nav { width: 38px; height: 52px; } }
