@@ -1,0 +1,86 @@
+/* Insights list + article pages (components/Insight*.jsx) */
+.ins { font-family: Rajdhani, sans-serif; color: #5a5a5a; }
+.ins * { box-sizing: border-box; }
+.ins .ins-sec { padding: 80px 0; background: #fff; }
+.ins .ins-sec--alt { background: #f7f2f6; }
+.ins .ins-wrap { width: 100%; max-width: 1170px; margin: 0 auto; padding: 0 15px; }
+.ins .ins-center { text-align: center; }
+.ins .ins-head { text-align: center; margin-bottom: 44px; }
+.ins .ins-kicker { font: 500 20px/22px Rajdhani, sans-serif; letter-spacing: 4px; text-transform: uppercase; color: #710e5c; margin: 0 0 14px; }
+.ins .ins-h2 { font: 700 40px/1.15 Rajdhani, sans-serif; text-transform: uppercase; color: #202020; margin: 0; }
+
+/* meta line */
+.ins .ins-meta { margin: 0 0 8px; font: 600 16px/1.2 Rajdhani, sans-serif; letter-spacing: 1px; text-transform: uppercase; color: #710e5c; }
+.ins .ins-meta--lg { font-size: 17px; text-align: center; margin-bottom: 18px; }
+
+/* cards */
+.ins .ins-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.ins .ins-card { display: flex; flex-direction: column; background: #fff; border: 1px solid #ecdfe9; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 28px rgba(113, 14, 92, .06); transition: transform .25s, box-shadow .25s; }
+.ins .ins-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(113, 14, 92, .14); }
+.ins .ins-card__img { display: block; aspect-ratio: 1502 / 650; overflow: hidden; background: #efe3ec; }
+.ins .ins-card__img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.ins .ins-card:hover .ins-card__img img { transform: scale(1.04); }
+.ins .ins-card__body { display: flex; flex-direction: column; flex: 1; padding: 24px 26px 26px; }
+.ins h3.ins-card__title { margin: 0 0 10px; font: 700 24px/1.25 Rajdhani, sans-serif; color: #202020; }
+.ins h3.ins-card__title a { color: inherit; text-decoration: none; }
+.ins h3.ins-card__title a:hover { color: #710e5c; }
+.ins .ins-card__text { margin: 0 0 18px; font: 500 18px/1.55 Rajdhani, sans-serif; color: #5a5a5a; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.ins a.ins-card__link { margin-top: auto; display: inline-flex; align-items: center; gap: 10px; font: 700 18px/1 Rajdhani, sans-serif; color: #710e5c; text-decoration: none; }
+.ins a.ins-card__link:hover { color: #8f1d7b; gap: 14px; }
+.ins .ins-card--featured { flex-direction: row; margin-bottom: 36px; }
+.ins .ins-card--featured .ins-card__img { flex: 0 0 56%; aspect-ratio: auto; min-height: 340px; }
+.ins .ins-card--featured .ins-card__body { justify-content: center; padding: 40px; }
+.ins .ins-card--featured h3.ins-card__title { font-size: 36px; }
+.ins .ins-card--featured .ins-card__text { -webkit-line-clamp: 4; font-size: 20px; }
+
+/* article */
+.ins .ins-article { max-width: 860px; }
+.ins .ins-cover { display: block; width: 100%; height: auto; border-radius: 16px; margin: 0 0 40px; box-shadow: 0 10px 34px rgba(0, 0, 0, .12); }
+.ins .ins-content { font: 500 20px/1.8 Rajdhani, sans-serif; color: #444; overflow-wrap: break-word; }
+.ins .ins-content p { margin: 0 0 22px; }
+.ins .ins-content h2 { margin: 46px 0 16px; font: 700 34px/1.2 Rajdhani, sans-serif; color: #202020; }
+.ins .ins-content h3 { margin: 32px 0 12px; font: 700 26px/1.25 Rajdhani, sans-serif; color: #710e5c; }
+.ins .ins-content h4 { margin: 24px 0 10px; font: 700 21px/1.3 Rajdhani, sans-serif; color: #202020; }
+.ins .ins-content ul, .ins .ins-content ol { margin: 0 0 24px; padding-left: 26px; }
+.ins .ins-content ul { list-style: disc; }
+.ins .ins-content ol { list-style: decimal; }
+.ins .ins-content li { margin-bottom: 8px; padding-left: 4px; }
+.ins .ins-content li::marker { color: #710e5c; }
+.ins .ins-content strong { color: #2a2a2a; font-weight: 700; }
+.ins .ins-content a { color: #710e5c; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.ins .ins-content a:hover { color: #8f1d7b; }
+.ins .ins-content img { max-width: 100%; height: auto; border-radius: 12px; margin: 8px 0 22px; }
+.ins .ins-content figure { margin: 0 0 28px; }
+.ins .ins-content figcaption { margin-top: 8px; font-size: 16px; text-align: center; color: #777; }
+.ins .ins-content table { display: block; width: 100%; max-width: 100%; overflow-x: auto; border-collapse: collapse; font: 500 17px/1.5 Rajdhani, sans-serif; margin: 0 0 6px; }
+.ins .ins-content th, .ins .ins-content td { border: 1px solid #e2d3de; padding: 12px 14px; text-align: left; vertical-align: top; min-width: 130px; }
+.ins .ins-content th { background: #710e5c; color: #fff; font-weight: 700; }
+.ins .ins-content tbody tr:nth-child(even) td { background: #faf5f9; }
+.ins .ins-back { margin-top: 44px; padding-top: 26px; border-top: 1px solid #ecdfe9; }
+
+/* closing band + button */
+.ins .ins-cta { background: linear-gradient(135deg, #1d0b2b 0%, #710e5c 100%); }
+.ins .ins-cta .ins-h2, .ins .ins-cta__text { color: #fff; }
+.ins .ins-cta .ins-h2 { margin-bottom: 14px; }
+.ins .ins-cta__text { margin: 0 0 30px; font: 500 21px/1.6 Rajdhani, sans-serif; }
+.ins .ins-cta__text a { color: #fff; font-weight: 700; text-decoration: underline; }
+.ins a.ins-btn { display: inline-flex; align-items: center; gap: 14px; padding: 18px 42px; border-radius: 31px; background: #fff; color: #710e5c; font: 600 20px/1 Rajdhani, sans-serif; text-decoration: none; transition: background .25s, transform .25s; }
+.ins a.ins-btn:hover { background: #f7e8f3; transform: translateY(-2px); }
+
+@media (max-width: 991px) {
+  .ins .ins-sec { padding: 60px 0; }
+  .ins .ins-h2 { font-size: 32px; }
+  .ins .ins-grid { grid-template-columns: repeat(2, 1fr); }
+  .ins .ins-card--featured { flex-direction: column; }
+  .ins .ins-card--featured .ins-card__img { flex: none; aspect-ratio: 1502 / 650; min-height: 0; }
+  .ins .ins-card--featured .ins-card__body { padding: 26px; }
+  .ins .ins-card--featured h3.ins-card__title { font-size: 28px; }
+}
+@media (max-width: 575px) {
+  .ins .ins-sec { padding: 46px 0; }
+  .ins .ins-h2 { font-size: 27px; }
+  .ins .ins-grid { grid-template-columns: 1fr; gap: 22px; }
+  .ins .ins-content { font-size: 18px; }
+  .ins .ins-content h2 { font-size: 28px; }
+  .ins .ins-content h3 { font-size: 23px; }
+}

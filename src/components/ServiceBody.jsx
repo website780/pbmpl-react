@@ -20,9 +20,9 @@ function Item({ it }) {
   );
 }
 
-export function ServiceBanner({ bg, name, sub, slug }) {
+export function ServiceBanner({ bg, name, sub, slug, crumbs, long }) {
   return (
-    <div className="page-title-area overlay-bg style-1" style={{ backgroundImage: 'url(' + bg + ')' }}>
+    <div className={'page-title-area overlay-bg style-1' + (long ? ' svc-long' : '')} style={{ backgroundImage: 'url(' + bg + ')' }}>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-sm-12 text-left">
@@ -34,9 +34,11 @@ export function ServiceBanner({ bg, name, sub, slug }) {
               <li className="breadcrumb-list">
                 <a href="/" title="Home">Home</a>
               </li>
-              <li className="breadcrumb-list">
-                <a href={'/' + slug + '/'}>{name}</a>
-              </li>
+              {(crumbs || [{ label: name, href: '/' + slug + '/' }]).map((c) => (
+                <li className="breadcrumb-list" key={c.href}>
+                  <a href={c.href}>{c.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

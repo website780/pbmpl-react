@@ -1,5 +1,6 @@
 // Route table (generated). One lazy-loaded React page component per WordPress page.
 import { lazy } from 'react';
+import { insights } from './data/insights.js';
 
 export const routes = [
   { path: "/", load: () => import('./pages/home.jsx') },
@@ -47,4 +48,9 @@ export const routes = [
   { path: "/servers-storage/", load: () => import('./pages/servers-storage.jsx') },
   { path: "/networking-wifi/", load: () => import('./pages/networking-wifi.jsx') },
   { path: "/education-technology/", load: () => import('./pages/education-technology.jsx') },
+  { path: "/insights/", load: () => import('./pages/insights.jsx') },
+  ...insights.map((p) => ({
+    path: '/insights/' + p.slug + '/',
+    load: () => import('./pages/insights-post.jsx').then((m) => m.postModule(p.slug)),
+  })),
 ];
