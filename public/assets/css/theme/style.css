@@ -3900,13 +3900,13 @@ footer.footer-area.style-3 {
 }
 /*** New ***/
  .shape-4 {
-     background-image: url("/assets/images/4.png");
+     background-image: url("/assets/images/4.webp");
 }
  .shape-2 {
-     background-image: url("/assets/images/2.png");
+     background-image: url("/assets/images/2.webp");
 }
  .shape-3 {
-     background-image: url("/assets/images/3.png");
+     background-image: url("/assets/images/3.webp");
 }
  .btn-nn {
      background: var(--e-global-color-very-dark-blue)!important;
