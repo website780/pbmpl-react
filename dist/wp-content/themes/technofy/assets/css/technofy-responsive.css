@@ -1,0 +1,281 @@
+@media screen and (max-width: 1440px) {
+    .banner-img { width: 554px; position: absolute; float: right; top: -57px; right: 10px; }
+}
+
+@media screen and (max-width: 1024) {
+    #Comprison_pricingplan ul { padding-bottom: 0; }
+}
+@media screen and (max-width: 1199px) {
+    #banner_slider .banner-slider-inner { padding-top: 60px; }
+    #banner_slider .carousel-inner { padding: 60px 0 30px 0; }
+    #banner_slider .carousel-control-prev-icon { padding: 16px 12px; }
+    #banner_slider .carousel-control-next-icon { padding: 16px 12px; }
+    .banner-img, .slider-2 .banner-img { width: 463px; position: relative; float: right; top: -10px; right: -10px; }
+    .slider-3 .banner-img  { width: 463px; position: relative; float: right; top: -100px; right: -10px; }
+    #banner_slider .carousel-item { min-height: 520px; }
+    .hosting-text, .server-text, .vps-text { left: 160px; }
+    .hosting-payment-card, .server-payment-card, .vps-payment-card { padding: 48px 30px 61px 30px; }
+    .text-paragraph p { padding: 8px 0 0 0;}
+    .banner-text{ width: 50%;}
+    .banner-listing { width: 50%; }
+    .banner-text h1 { font-size: 50px !important; letter-spacing: -1.5px !important; }
+    .banner-text p { margin-bottom: 14px; }
+    .slider-2 p, .slider-3 p { padding-right: 6%; margin-bottom: 20px;}
+    .text-paragraph { width: 50%; }
+    #Comprison_pricingplan table thead th:nth-child(2), #Comprison_pricingplan table thead th:nth-child(3), #Comprison_pricingplan table thead th:nth-child(4) { width: 200px; padding: 21px 0px; }
+    .reseller-table-text { right: 260px; }
+    .shared-plan-box { padding: 50px 35px; }
+    .slider_content { padding: 55px 30px 78px 30px; width: 32.5%; }
+    .vps-slider-section .select-form { background-position: 97% 21px; }
+    .sliderbox { width: 67.5%;  padding: 60px 60px 25px 60px; }
+    .review-section .carousel-indicators { bottom: -35px; }
+    .service-sect #Layer_1{    left: -10vw; top: 0px;}
+}
+  
+@media (min-width: 991px) {
+    #Comprison_pricingplan ul { display: none; }
+    #Comprison_pricingplan td,
+    #Comprison_pricingplan th { display: table-cell !important; width: 290px; }
+    #Comprison_pricingplan td + td,
+    #Comprison_pricingplan th + th { width: auto; }
+   
+}  
+  
+@media screen and (max-width: 991px) {
+    .service-sect #Layer_1{    left: -17vw; top: 0px;}
+
+    
+    #banner_slider .banner-slider-inner { padding-top: 30px; }
+    .banner-listing, .banner-button { width: 100%; text-align: center; }
+    .banner-listing { padding-top: 20px; }
+    .banner-listing ul { padding-left: 0; }
+    .banner-listing ul li::before { display: none; }
+    .banner-img, .slider-2 .banner-img, .slider-3 .banner-img { position: relative; top: 10px; right: 0px; float: left; left: 110px; width: 500px; margin-bottom: 20px;}
+    #banner_slider .carousel-indicators { bottom: 60px; }
+    .text-paragraph p { padding: 0;}
+    #banner_slider .carousel-inner { padding: 20px 0 105px 0; }
+    #banner_slider .carousel-item { min-height: auto; }
+    .banner-text h1 { font-size: 39px !important; line-height: 45px !important; }
+    .text-paragraph { width: 100%; text-align: center; }
+    .banner-text .text-paragraph { padding: 0px 0% 0 0; font-size: 16px; line-height: 25px; }
+    .banner-button { text-align: center;}
+    .navbar-toggler:focus { outline: none;}
+    .banner-text p { font-size: 16px; line-height: 25px; }
+    .banner-text span { font-size: 16px; line-height: 25px; }
+    .banner-text { width: 100%; text-align: center; }
+    .primary-btn { padding: 14px 30px; }
+    .secondary-btn { padding: 14px 30px; margin-left: 6px; }
+    .subscribe-form .form-control { padding: 20px 0px 20px 39px; }
+    .hosting-text, .server-text, .vps-text { left: 525px; }
+    .plan ul { margin-right: 20%; width: 40%;}
+    .plan figure { margin-right: 35px;}
+    .plan ul figure { margin-right: 0px; }
+    .plan .price-outer { float: left; width: 40%; }
+    .hosting-list li, .company-list li, .contact-list li { padding-bottom: 5px;}
+    .review-section p { margin-bottom: 33px;}
+    .review-section-text { font-size: 20px; }
+    .domain-table-section { padding: 70px 0px; }
+    .domain-table-section .table thead th { font-size: 16px; }
+    .domain-table-section .table tbody td, .domain-table-section .table tbody td .price { font-size: 14px; } 
+    .domain-table-section .table tbody th .popular, .domain-table-section .table tbody th .sale { font-size: 10px; }
+    .reseller-table-text { display: none; }
+    #Comprison_pricingplan table tbody tr td { width: 50%; float: left; height: auto; }
+    #Comprison_pricingplan .sep { width: 100%; float: left; height: auto; }
+    .reseller-comparison-text { margin-bottom: 40px; }
+    #Comprison_pricingplan table tbody tr:last-child td:nth-child(3), #Comprison_pricingplan table tbody tr:last-child td:nth-child(2),  #Comprison_pricingplan table tbody tr:last-child td:nth-child(4) { border-bottom-right-radius: 15px;}
+    #Comprison_pricingplan button:focus { outline: none; }
+    #Comprison_pricingplan td.default { border-right: none;}
+    #Comprison_pricingplan table tbody tr td:nth-child(4) { border-left: 1px solid  #e8eaf1; }
+    #Comprison_pricingplan table tbody tr:first-child td:nth-child(3) { border-bottom: 1px solid  #e8eaf1; border-top-right-radius: 15px;}
+    #Comprison_pricingplan table thead tr th { border-bottom: none;}
+    #Comprison_pricingplan table tbody tr:nth-child(2) td:first-child { border-top-left-radius: 15px !important;}
+    #Comprison_pricingplan table tbody tr:first-child td:nth-child(2) { border-top-right-radius: 15px !important;}
+    #Comprison_pricingplan table tbody tr:first-child td:nth-child(4) { border-left: none !important; border-top-right-radius: 15px !important;}
+    #Comprison_pricingplan table tbody tr:first-child td:nth-child(3) { border-left: none !important; }
+    #Comprison_pricingplan table thead th:nth-child(1) { display: none; }
+    #Comprison_pricingplan ul { margin-bottom: 45px; }
+    .shared-plan-box p {  margin-bottom: 0px; }
+    .shared-tabs-section { margin-top: -115px; }
+    .shared-plan-box .shared-plan-box-paragraph { margin-top: 18px;}
+    .shared-plan-box { padding: 50px; }
+    .sliderbox { width: 100%; padding: 0px; margin-bottom: 30px; }
+    .slider_content { width: 100%; box-shadow: none; padding: 0px;}
+    .plan-wrap { padding: 60px; top: 0px; position: relative; }
+    .slider-row1 label{ font-size:16px; }
+    .slider-row1 .slide-value{ font-size:16px; }
+    .vps-slider-section { padding: 70px 0px; }
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    #banner_slider .banner-slider-inner { padding-top: 20px; }
+    .text-paragraph { width: 100%; }
+    .banner-text { width: 100%; text-align: center; }
+    .banner-text h1 { font-size: 35px !important; line-height: 40px !important; }
+    .banner-btn { padding-top: 21px; text-align: center;}
+    .text-paragraph p{ font-size: 14px; line-height: 20px; margin-bottom: 25px; padding: 8px 0 0 0; text-align: center;}
+    .text-paragraph span { font-size: 14px; line-height: 20px; }
+    .banner-text span { font-size: 15px; line-height: 22px; margin-bottom: 10px;}
+    #banner_slider .carousel-inner { padding: 0px 0 90px 0; }
+    #banner_slider .carousel-indicators { bottom: 45px; }
+    #banner_slider .carousel-item { min-height: 0px; }
+    .banner-listing ul, .banner-listing ol, .banner-listing p { margin-bottom: 20px; }
+    .banner-listing li, .banner-listing p { font-size: 14px; line-height: 20px; }
+    .primary-btn { padding: 14px 35px; font-size: 12px;}
+    .secondary-btn { padding: 14px 35px; font-size: 12px;  margin-left: 4px;}
+    .banner-text p { font-size: 14px; line-height: 20px; margin-bottom: 7px; padding-bottom: 15px; }
+    .slider-2 li, .slider-3 li { font-size: 14px; font-weight: 400; margin-bottom: 5px; }
+    .hosting-section { padding: 60px 0px 60px 0px; }
+    .banner-img, .slider-2 .banner-img, .slider-3 .banner-img { left: 17px; }
+    .hosting-section h1 { font-size: 30px; line-height: 40px; }
+    .hosting-section p { font-size: 14px; line-height: 18px; }
+    .hosting-text, .server-text, .vps-text { left: 344px; }
+    .plan ul { margin-right: 11%; width: 50%; }
+    .hosting-btn, .server-btn, .vps-btn { padding: 12px 30px; }
+    .plan li span { font-size: 16px; line-height: 20px; }
+    .plan .hosting-img-1, .plan .hosting-img-2, .plan .hosting-img-3 { margin-bottom: 15px !important; }
+    .plan .price-outer { width: 35%; }
+    .hosting-pricing span, .server-pricing span, .vps-pricing span { font-size: 30px; line-height: 20px; }
+    .hosting-setting, .server-setting, .vps-setting { padding-top: 18px;}
+    .shared-hosting li, .server-hosting li, .vps-hosting li { font-size: 16px; line-height: 20px; }
+    .plan-box img { width: 45px;}
+    .plan-box h4 { font-size: 18px; font-weight: 500; line-height: 22px; }
+    .stars li { font-size: 22px; }
+    .review-section-text { font-size: 20px; padding: 0; line-height: 26px;}
+    .review-section ul { margin-bottom: 10px; }
+    .ceo h4 { font-size: 22px !important;  line-height: 10px !important;}
+    .quote i { padding-bottom: 10px !important;}
+    .review-section .carousel-indicators { bottom: -30px; }
+    .domain-table-section { padding: 60px 0px; }
+    .table-plan-box { padding: 40px 30px; }
+    .domain-table-section .table tbody td .price { display: block;}
+    .domain-table-section .table tbody th { vertical-align: middle; padding: 0px;}
+    .domain-table-section .table thead th { font-size: 15px; }
+    .shared-plan-box h2 { font-size: 45px !important; line-height: 40px !important; }
+    .shared-plan-box .shared-plan-box-pricing { font-size: 30px; line-height: 30px; }
+    .shared-plan-box .shared-plan-box-pricing-month { font-size: 16px; line-height: 22px; }
+    #Comprison_pricingplan table tbody tr { border: none; }
+    #Comprison_pricingplan table tbody tr td { font-size: 14px; }
+    #Comprison_pricingplan table tbody tr td:first-child { font-size: 14px; }
+    #Comprison_pricingplan button { font-size: 12px; }
+    #Comprison_pricingplan ul { margin-bottom: 30px; }
+    #Comprison_pricingplan button { padding: 9px 50px; }
+    .shared-plan-box .shared-plan-box-paragraph { margin-top: 0px; }
+    .shared-plan-box p { margin-bottom: 15px;}
+    .pricebox .pricetxt span.doller{ font-size:32px; }
+    .pricebox .pricetxt span.numeric { font-size:32px; }
+    .vps-slider-section .form-group { margin-bottom: 20px; }
+    .vps-slider-section { padding: 60px 0px; }
+    .service-sect #Layer_1{    left: 0vw; top: 0px;}
+}
+  
+  
+  
+@media screen and (max-width: 575px) {
+    .banner-text h1 { font-size: 29px !important; line-height: 35px !important; }
+    .banner-text span { font-size: 14px; line-height: 20px; } 
+    .banner-img { left: 0; width: 100%; }
+    .slider-2 .banner-img, .slider-3 .banner-img { left: 13px; width: 100%; }
+    .slider-2 ul, .slider-3 ul { margin-bottom: 25px; }
+    .banner-text .text-paragraph { font-size: 14px; line-height: 20px; margin-bottom: 5px; }  
+    .slider-2 li, .slider-3 li { font-size: 12px; }
+    .primary-btn { padding: 12px 25px; }
+    .secondary-btn { padding: 12px 25px; }
+    .subscribe-form .form-control { padding: 15px 0px 15px 10px; font-size: 12px; }
+    .plan .hosting-img-1, .plan .hosting-img-2, .plan .hosting-img-3 { margin-bottom: 20px !important; }
+    .plan h4 { font-size: 18px; }
+    .plan li { padding: 8px 0; }
+    .plan li span { font-size: 14px; line-height: 20px; }
+    .hosting-list-icon { max-width: 20px; }
+    .plan ul { margin-right: 0%; width: 100%; display: table; margin-bottom: 20px; }
+    .plan .price-outer { width: 100%; }
+    .plan small { line-height: 0px; }
+    .plan h2 { line-height: 40px !important; margin-bottom: 20px; }
+    .hosting-section { padding: 50px 0px 60px 0px; }
+    .hosting-text, .server-text, .vps-text { left: 60%; font-size: 12px; }
+    .hosting-pricing span, .server-pricing span, .vps-pricing span { font-size: 25px; line-height: 20px; }
+    .hosting-pricing small, .server-pricing small, .vps-pricing small { font-size: 14px;}
+    .shared-hosting img, .server-hosting img, .vps-hosting img { padding-right: 10px; }
+    .hosting-btn, .server-btn, .vps-btn { margin-left: 0%; padding: 14px 36px; font-size: 12px; }
+    .hosting-section h1 { font-size: 26px; line-height: 35px; }
+    .hosting-img-1 img, .hosting-img-2 img, .hosting-img-3 img { width: 50px; float: none;}
+    .plan figure { margin-bottom: 15px; }
+    .shared-hosting, .server-hosting, .vps-hosting { width: 100%; }
+    .plan-box-guarrantee, .plan-box-backup { margin-bottom: 30px; }
+    .plan-box h4 br{ display: none;}
+    .review-section p { margin-bottom: 20px; }
+    .stars li { font-size: 20px; }
+    .quote i { font-size: 30px; }
+    .review-section-text { font-size: 18px;  line-height: 25px; }
+    .ceo h4 { font-size: 20px !important; padding-top: 8px; line-height: 10px !important; }
+    .ceo .ceo-text{ font-size: 12px; line-height: 18px; }
+    .review-section .carousel-indicators { bottom: -25px; }
+    .domain-table-section .table thead th { font-size: 10px; }
+    .table-plan-box { padding: 30px 20px; }
+    .domain-table-section .table tbody th { font-size: 10px; }
+    .domain-table-section .table tbody th .popular, .domain-table-section .table tbody th .sale { font-size: 7px; }
+    .domain-table-section .table tbody td, .domain-table-section .table tbody td .price { font-size: 10px; }
+    #Comprison_pricingplan button { padding: 7px 20px; }
+    #Comprison_pricingplan table tbody tr td:first-child { padding-left: 20px; }
+    #Comprison_pricingplan table tbody tr td { padding: 12px 0px; }
+    #Comprison_pricingplan table tbody tr:first-child td { padding-top: 20px; }
+    #Comprison_pricingplan table tbody tr:last-child td { padding-bottom: 20px; }
+    #Comprison_pricingplan table tbody tr td { font-size: 12px; }
+    #Comprison_pricingplan table tbody tr td:first-child { font-size: 12px; }
+    .reseller-table-plan-box-btn { padding: 12px 25px; }
+    #Comprison_pricingplan table tbody tr:nth-child(2) td { padding-top: 20px; }
+    .shared-plan-box figure { margin-bottom: 20px !important; }
+    .shared-plan-box h4 { font-size: 20px !important; }
+    .shared-plan-box p { font-size: 14px; line-height: 20px; }
+    .shared-plan-box h2 { font-size: 40px !important; }
+    .shared-plan-box .shared-plan-box-pricing { font-size: 25px; line-height: 20px;}
+    .shared-plan-box .shared-plan-box-pricing-month { font-size: 14px; }
+    .shared-plan-box-btn { padding: 12px 36px; font-size: 12px; }
+    .shared-plan-box { padding: 30px; }
+    .plan-box h4 { font-size: 14px; line-height: 22px; }
+    .vps-slider-section h4 { font-size: 22px !important;}
+    .plan-wrap { padding: 50px 30px 50px 30px; }
+    .vps-slider-section p { line-height: 16px; font-size: 14px; margin-bottom: 27px; }
+    .vps-slider-section .form-control { font-size: 14px; }
+    .white_btn a { padding: 12px 30px;  font-size: 12px; }
+    .slider-container .ui-slider-handle { width: 25px; height: 25px; margin-top: -3px;}
+}
+
+/* ------------ Elementor SECTION RESPONSIVE CSS ------------ */
+@media screen and (max-width: 1199px) {
+    .shared-tab-box .elementor-tabs-wrapper { justify-content: center !important; margin-bottom: 50px; }
+    .domain-search-form #dc-tld-1 { width: 15%; }
+
+}
+@media screen and (max-width: 1024px) {
+    .hosting-feature-inner .elementor-section-boxed .elementor-col-50 { width: 100% !important; }
+    .domain-search-form #dc-tld-1 { width:25% !important; }
+    .footer-subscribe-form form{ width: 100%; margin: auto; }
+}
+@media screen and (max-width: 991px) {
+    .shared-tab-box .elementor-tabs-wrapper { margin-bottom: 40px; }
+}
+@media screen and (max-width:767px){
+    .shared-tab-box .elementor-tabs-wrapper { display: flex !important; margin-bottom: 30px; }
+    .shared-tab-box .elementor-widget-tabs .elementor-tab-mobile-title { display: none; }
+    .shared-tab-box .elementor-tab-title { font-size: 14px; line-height: 14px; }
+    .contact-us-plan-box-section .form-control { padding: 10px 0px 10px 18px !important; width: 100%; height: 48px; }
+    .contact-us-plan-box-section .wpcf7 form.sent .wpcf7-response-output { bottom: -20px; font-size: 12px; width: auto; }
+    .domain-search-form #dc-tld-1 { width: 29% !important; font-size: 14px !important; }
+    .domain-search-form #dc-domain-1 { width: 71% !important; font-size: 14px !important; padding: 16px 21px!important; }
+    .domain-search-form #dc-result-1 .table-row .table-cell:first-child { width: 25%; }
+    .footer-subscribe-form .mc4wp-form-fields .email { padding: 20px; font-size: 14px; }
+    .footer-subscribe-form .mc4wp-form-fields .button { padding: 14px 20px 15px 20px; font-size: 12px; line-height: 13px; }	
+    
+}
+@media screen and (max-width:575px){
+    .support-contact-details a, .contact-us a { font-size: 14px !important; line-height: 20px !important; }
+    .contact-us-plan-box-section .form-control { padding: 10px 0px 10px 18px !important; height: 48px !important; font-size: 16px !important; }
+    .domain-search-form #dc-domain-1 { padding: 12px 15px!important; font-size: 12px !important; width: 67% !important; }
+    .domain-search-form #dc-tld-1 { font-size: 12px !important; height: 44px; background-position: 80% 18px; background-size: 12px; margin-left: 10px !important; }
+    .domain-search-form #dc-submit-1 { padding: 16px 38px !important; }
+    .domain-search-form #dc-result-1 .table-row .table-cell:first-child { width: 50%; }
+    
+}

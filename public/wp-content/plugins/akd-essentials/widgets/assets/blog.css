@@ -1,0 +1,49 @@
+.blog-section {
+	margin: 0 auto;
+}
+.blog-outer {
+	box-shadow: 0px 0px 117px 0px rgba(196,206,213,0.24);
+}
+.blog-outer figure {
+	margin: 0;
+}
+.blog-heading .circle {
+	position: relative;
+}
+.blog-heading .circle i {
+	position: absolute;
+	right: -3px;
+	top: 6px;
+}
+.blog-content {
+	padding: 20px 33px 28px 29px;
+	background: #ffffff;
+}
+.blog-content .blog-avatar-img {
+	float: left;
+	margin-right: 13px !important;
+}
+.blog-content .author-name {
+	display: block;
+}
+
+@media screen and (max-width: 1199px) {
+.blog-outer {
+width: 48%;
+margin: 0 1% 30px;
+max-width: none;
+}
+.blog-section {
+	width: 100%;
+	margin: 0 auto;
+}
+.blog-outer .blog-thumbnail-img {
+   background: #cdcdcd;
+}
+}
+@media screen and (max-width: 767px) {
+.blog-outer {
+width: 96%;
+margin: 0px 2% 30px 2%;
+}
+}
