@@ -11,13 +11,13 @@ Simply Static export: `C:\Users\ADMIN\Desktop\simply-static-1-1792562417` (60 pa
 - `src/components/Header.jsx` (takes `active`/`aria` props for current-menu state), `Footer.jsx`.
 - `src/PageShell.jsx`: sets body class/title/meta/icons/canonical, loads page CSS in original order (gates render until loaded), renders static React tree, then runs original WP/theme scripts sequentially in original order, then dispatches synthetic `load`. jQuery/Elementor/slick/owl/etc. do the effects, so React tree must stay static (no re-render, no StrictMode).
 - `src/main.jsx`: picks route from `location.pathname`; no router lib; links are normal `<a>` (hard navigation). `NotFound.jsx` for unknown.
-- `public/wp-content`, `public/wp-includes`: original assets. `public/css-inline/*.css`: original head `<style>` blocks. `public/fonts/`: local Raleway/Rajdhani/Inter/Roboto woff2 + `fonts.css` (Google Fonts removed); theme `roboto.css` rewritten to local.
+- `public/assets/`: `css/{theme,pages,plugins,elementor}`, `js/{theme,wp,plugins}`, `images/` (flat, deduped), `fonts/`, `vendor/{elementor,elementor-pro,metform}` (kept intact: Elementor lazy-loads chunks relative to `urls.assets`, config strings in pages point at `/assets/vendor/elementor/`). `css/pages/*.css` = original head `<style>` blocks. Vite `assetsDir` is `bundle` so it does not clash with `public/assets`. WordPress folders (wp-content/wp-includes) no longer exist.
 - `scripts/postbuild.mjs`: copies `dist/index.html` into each route folder + `404.html` (static hosting).
 - Verified with Playwright + pixelmatch vs. original export (fonts localised) at 1440 and 390 px: 56/60 pages <0.5% diff. Diffs left: `/pricing/`, `/services/` (my placeholder images vs broken originals), `/team/` ~1%.
 - Original site's own console errors ("Invalid attempt to destructure non-iterable instance") exist in the original too â€“ ignore.
 
 ## Open items
-1. Blog card images were hotlinked from `designingmedia.com/technofy/.../2023/01/article-{1,2,3}.jpg` (unreachable from sandbox). Currently **gray placeholders** at `public/wp-content/uploads/2023/01/article-N.jpg`. Replace with real images (ask user).
+1. Blog card images were hotlinked from `designingmedia.com/technofy/.../2023/01/article-{1,2,3}.jpg` (unreachable from sandbox). Currently **gray placeholders** at `public/assets/images/article-N.jpg`. Replace with real images (ask user).
 2. Forms (MetForm, Contact Form 7, comment form) posted to WP `wp-json`/`wp-comments-post.php`. Comment form action set to `#`. Forms will not submit until a backend/form service is wired. Ask user which.
 3. Page `<title>` is the staging text `pbmpl.alphabetasolution.co.in` as in original â€“ change in each page's `export const page = {...}` when user wants.
 4. DONE: `public/wp-content` + `public/wp-includes` pruned to files referenced by pages (src/, css-inline, CSS `url()` closure) plus Elementor lazy chunks. Verified by crawling all 60 pages against a 404-logging server. If a new page/feature 404s on a plugin file, restore it from git history.
