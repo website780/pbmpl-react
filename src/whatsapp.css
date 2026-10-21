@@ -1,0 +1,45 @@
+/* Floating WhatsApp button with a pulsing ring (components/WhatsAppButton.jsx) */
+a.wa-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 99999;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s ease;
+}
+a.wa-float:hover { transform: scale(1.08); }
+a.wa-float svg { position: relative; z-index: 2; display: block; }
+
+a.wa-float::before,
+a.wa-float::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25d366;
+  opacity: 0.55;
+  z-index: 1;
+  animation: wa-pulse 2s ease-out infinite;
+}
+a.wa-float::after { animation-delay: 1s; }
+
+@keyframes wa-pulse {
+  0% { transform: scale(1); opacity: 0.55; }
+  100% { transform: scale(1.75); opacity: 0; }
+}
+
+@media (max-width: 575px) {
+  a.wa-float { right: 16px; bottom: 16px; width: 56px; height: 56px; }
+  a.wa-float svg { width: 30px; height: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  a.wa-float::before, a.wa-float::after { animation: none; opacity: 0; }
+}

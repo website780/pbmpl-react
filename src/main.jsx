@@ -1,5 +1,6 @@
 import './fixes.css';
 import './service.css';
+import './whatsapp.css';
 import { createRoot } from 'react-dom/client';
 import { routes } from './routes';
 import PageShell from './PageShell';

@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
+import WhatsAppButton from './components/WhatsAppButton';
 
 const fix = (u) => u.replace(/\/{2,}/g, '/');
 
@@ -107,5 +108,10 @@ export default function PageShell({ mod }) {
     if (ready) runScripts(page.scripts);
   }, [ready, page]);
 
-  return ready ? <Page /> : null;
+  return ready ? (
+    <>
+      <Page />
+      <WhatsAppButton />
+    </>
+  ) : null;
 }
