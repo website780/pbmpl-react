@@ -35,6 +35,40 @@ function loadStyles(styles) {
   );
 }
 
+// The theme loads jQuery 1.8.3 over WP's jQuery 3; 1.8.3 objects are not iterable, which makes
+// MetForm's array-destructuring of $scope.find() throw, which aborts Elementor's widget init
+// (animated content stays hidden).
+function patchJq() {
+  const jq = window.jQuery;
+  if (jq && jq.fn && !jq.fn[Symbol.iterator]) jq.fn[Symbol.iterator] = Array.prototype[Symbol.iterator];
+}
+
+// Elementor's own scroll-reveal (waypoints) never initialises here (it is missing from the original
+// export too), so animated blocks stay hidden. Reveal whatever is still invisible when it scrolls in.
+function revealInvisible() {
+  const els = [...document.querySelectorAll('.elementor-invisible')];
+  if (!els.length || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        io.unobserve(el);
+        let s = {};
+        try { s = JSON.parse(el.getAttribute('data-settings') || '{}'); } catch (e) { /* ignore */ }
+        const anim = s._animation || s.animation;
+        const delay = Number(s._animation_delay || s.animation_delay || 0);
+        setTimeout(() => {
+          el.classList.remove('elementor-invisible');
+          if (anim && anim !== 'none') el.classList.add('animated', anim);
+        }, delay);
+      });
+    },
+    { threshold: 0.1 }
+  );
+  els.forEach((el) => io.observe(el));
+}
+
 // Runs the original scripts sequentially, in the original order.
 async function runScripts(scripts) {
   for (const s of scripts) {
@@ -44,16 +78,18 @@ async function runScripts(scripts) {
       if (s.id) el.id = s.id;
       if (s.src) {
         el.src = fix(s.src);
-        el.onload = el.onerror = () => res();
+        el.onload = el.onerror = () => { patchJq(); res(); };
         document.body.appendChild(el);
       } else {
         el.text = s.code;
         document.body.appendChild(el);
+        patchJq();
         res();
       }
     });
   }
   window.dispatchEvent(new Event('load'));
+  setTimeout(revealInvisible, 800);
 }
 
 export default function PageShell({ mod }) {

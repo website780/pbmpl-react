@@ -1,3 +1,4 @@
+import './fixes.css';
 import { createRoot } from 'react-dom/client';
 import { routes } from './routes';
 import PageShell from './PageShell';
