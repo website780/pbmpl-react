@@ -175,18 +175,3 @@
   body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children { cursor: pointer; }
   body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children.sub-open:before { transform: rotate(180deg); }
 }
-
-/* Social links: footer bottom bar (right side, opposite the copyright) and contact page card */
-.social-links { display: flex; align-items: center; gap: 12px; }
-.social-links__label { font: 500 16px/1 Rajdhani, sans-serif; color: #d6d8e2; margin-right: 4px; }
-.social-links a.social-links__btn { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255, 255, 255, .14); color: #fff; transition: background .2s, transform .2s; }
-.social-links a.social-links__btn svg { width: 16px; height: 16px; fill: currentColor; }
-.social-links a.social-links__btn:hover { background: #911e79; color: #fff; transform: translateY(-2px); }
-.footer-social { margin-top: 18px; }
-.footer-social .social-links__label { color: #fff; font-weight: 600; font-size: 17px; }
-.contact-social { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 20px; padding: 24px 28px; background: #fff; border-radius: 14px; box-shadow: 0 6px 24px rgba(0, 0, 0, .07); }
-.contact-social h4 { margin: 0; font: 700 22px/1.2 Rajdhani, sans-serif; color: #202020; }
-.contact-social .social-links a.social-links__btn { background: #710e5c; }
-.contact-social .social-links a.social-links__btn:hover { background: #911e79; }
-.contact-social { width: 100%; box-sizing: border-box; }
-body .contact-social h4 { color: #202020 !important; text-transform: none; }
