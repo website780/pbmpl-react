@@ -76,3 +76,102 @@
   .cd .cd-filter { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; padding-bottom: 8px; margin-left: -15px; margin-right: -15px; padding-left: 15px; padding-right: 15px; }
   .cd button.cd-chip { flex: 0 0 auto; font-size: 16px; padding: 9px 16px; }
 }
+
+/* Responsive: 5-step process rows (home, solution pages) */
+@media (max-width: 1024px) {
+  .elementor-widget-container .process-container { flex-wrap: wrap; justify-content: center; row-gap: 36px; }
+  .elementor-widget-container .process-container::before { display: none; }
+  .elementor-widget-container .process-container .process-step { flex: 0 0 33.333%; max-width: 33.333%; box-sizing: border-box; }
+  .elementor-widget-container .process-container .process-step .step-description { max-width: 100%; }
+}
+@media (max-width: 575px) {
+  .elementor-widget-container .process-container .process-step { flex: 0 0 100%; max-width: 100%; }
+  .elementor-widget-container .process-container .process-step .step-number { margin-bottom: 14px; }
+}
+
+/* Responsive: footer bottom bar copyright must wrap, not clip */
+@media (max-width: 767px) {
+  .elementor-element-7f45ca25 { width: 100% !important; }
+  .elementor-element-da06754 { width: 100% !important; }
+  .elementor-element-da06754 .elementor-widget-container { white-space: normal; overflow-wrap: anywhere; }
+}
+
+/* Responsive: mobile/tablet menu - show whole sub-menus, scroll the panel instead of a nested box */
+@media (max-width: 991px) {
+  body .navbar-area .nav-container .navbar-collapse { max-height: calc(100vh - 110px); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu { max-height: none !important; overflow: visible !important; }
+}
+@media (max-width: 767px) {
+  .elementor-element-da06754 .elementor-widget-container { padding-right: 72px; }
+}
+
+/* Responsive: lone inner columns that the original export squeezed to 43% on tablets */
+@media (max-width: 1024px) {
+  .elementor-column.elementor-element-8a06d9c, .elementor-column.elementor-element-52396c5, .elementor-column.elementor-element-63dff52,
+  .elementor-column.elementor-element-0e5d76b, .elementor-column.elementor-element-6b565b4, .elementor-column.elementor-element-ba859b0,
+  .elementor-column.elementor-element-b2a39e2, .elementor-column.elementor-element-689e130, .elementor-column.elementor-element-884c7d5,
+  .elementor-column.elementor-element-2a4942f { width: 100% !important; }
+}
+
+/* Responsive: home Build / Modernise / Secure / Manage cards go 2 x 2 on tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .elementor-element-8bf2c1f > .e-con-inner { flex-wrap: wrap; row-gap: 20px; }
+  .elementor-element-8bf2c1f > .e-con-inner > .elementor-element { flex: 0 0 calc(50% - 10px); width: calc(50% - 10px); }
+}
+
+/* One button style everywhere: pill, 16px, same height and padding */
+.elementor-widget-button .elementor-button,
+.svc a.svc-btn, .ins a.ins-btn, .clients-strip a.clients-strip__btn {
+  display: inline-flex !important; align-items: center; justify-content: center; gap: 12px;
+  box-sizing: border-box; min-height: 48px; padding: 12px 28px !important; border-radius: 31px !important;
+  font: 600 16px/1.2 Rajdhani, sans-serif !important; letter-spacing: 0; text-decoration: none;
+}
+.elementor-widget-button .elementor-button .elementor-button-content-wrapper { display: inline-flex; align-items: center; justify-content: center; gap: 12px; flex-direction: row; }
+.elementor-widget-button .elementor-button .elementor-button-icon { display: inline-flex; align-items: center; margin: 0; padding: 0; }
+.elementor-widget-button .elementor-button .elementor-button-text { padding: 0; line-height: 1.2; }
+.elementor-widget-button .elementor-button[style], .elementor-widget-button .elementor-button { box-shadow: 0 8px 19.6px rgba(0, 0, 0, .1); }
+.svc a.svc-btn:not(.svc-btn-light), .clients-strip a.clients-strip__btn { background: linear-gradient(-90deg, #911e79 0%, #710e5c 100%); }
+
+/* Mobile / tablet menu: even padding, centred carets, no dead space on the right */
+@media (max-width: 991px) {
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav { padding: 0 !important; margin: 10px 0 !important; width: 100%; }
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav > li { margin: 0 !important; width: 100%; }
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children:before { top: 22px !important; right: 4px !important; left: auto !important; }
+}
+
+/* Mobile: hero tagline centred like the rest of the hero, solutions cards full width, testimonial arrows centred */
+@media (max-width: 767px) {
+  .elementor-element-282d0b1, .elementor-element-282d0b1 .elementor-heading-title { text-align: center !important; }
+  .elementor-element-8bf2c1f > .e-con-inner { max-width: 100% !important; margin-left: 0 !important; padding-bottom: 0 !important; }
+  .elementor-element-8bf2c1f > .e-con-inner > .elementor-element { width: 100% !important; max-width: 100% !important; }
+  .testimonial-section .carousel-control-prev, .testimonial-section .carousel-control-next { width: 50% !important; padding: 0 !important; display: flex !important; align-items: center; }
+  .testimonial-section .carousel-control-prev { left: 0 !important; right: auto !important; justify-content: flex-end; padding-right: 14px !important; }
+  .testimonial-section .carousel-control-next { right: 0 !important; left: auto !important; justify-content: flex-start; padding-left: 14px !important; }
+}
+
+/* Mobile: intro paragraphs that touched the screen edge */
+@media (max-width: 767px) {
+  .elementor-element-a891fa0 > .elementor-widget-container, .elementor-element-7406004 > .elementor-widget-container,
+  .elementor-element-36fd87b > .elementor-widget-container, .elementor-element-2273d0a > .elementor-widget-container,
+  .elementor-element-b9876c9 > .elementor-widget-container, .elementor-element-a714e84 > .elementor-widget-container,
+  .elementor-element-53b1239 > .elementor-widget-container { padding-left: 8px; padding-right: 8px; }
+}
+.elementor-element-4f08704 .elementor-button { background-image: linear-gradient(-90deg, #911e79 0%, #710e5c 100%) !important; }
+
+/* Home testimonials: the original widescreen padding (~180px) left big gaps above and below */
+@media (min-width: 1025px) {
+  .elementor-element-04c74cf { padding-top: 90px !important; padding-bottom: 120px !important; }
+}
+
+/* Mobile menu: panel starts below the logo, sub-menus use the site purple instead of orange */
+@media (max-width: 991px) {
+  body .navbar-area .nav-container .navbar-collapse { top: 100px !important; }
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children > .sub-menu { background: rgba(255, 255, 255, .09) !important; border-radius: 10px; margin: 4px 0 10px !important; padding: 4px 0 !important; }
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a { background: transparent !important; color: #fff !important; padding: 10px 18px !important; border: 0 !important; }
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li { border-bottom: 1px solid rgba(255, 255, 255, .12) !important; }
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li:last-child { border-bottom: 0 !important; }
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a:hover,
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a:focus { background: rgba(255, 255, 255, .16) !important; color: #fff !important; }
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children { cursor: pointer; }
+  body .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children.sub-open:before { transform: rotate(180deg); }
+}

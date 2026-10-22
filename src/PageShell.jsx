@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
 import WhatsAppButton from './components/WhatsAppButton';
+import { watchSpacing } from './lib/spacing';
 
 const fix = (u) => u.replace(/\/{2,}/g, '/');
 
@@ -91,6 +92,7 @@ async function runScripts(scripts) {
   }
   window.dispatchEvent(new Event('load'));
   setTimeout(revealInvisible, 800);
+  watchSpacing();
 }
 
 export default function PageShell({ mod }) {

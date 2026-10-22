@@ -7,15 +7,31 @@
         /**-----------------------------
          *  Navbar fix
          * ---------------------------*/
-        // Parent items only act as dropdown triggers when they have no real link ("#").
-        // Parents that point to a page (Managed Services, Industries, Contact) navigate on desktop.
-        // On mobile the first tap opens the submenu and the second tap opens the page.
-        $(document).on('click', '.navbar-area .navbar-nav li.menu-item-has-children>a', function(e) {
-            var href = $(this).attr('href');
-            if (!href || href === '#') { e.preventDefault(); return; }
-            if ($(window).width() < 992 && $(this).siblings('.sub-menu').length && !$(this).data('tapped')) {
+        // Parent items: on desktop a real link navigates, '#' parents do nothing.
+        // On mobile a tap anywhere on the row (name or arrow) opens / closes the sub-menu;
+        // a parent with a real link navigates on the tap after it is open.
+        $(document).on('click', '.navbar-area .navbar-nav li.menu-item-has-children', function(e) {
+            var $li = $(this);
+            var $sub = $li.children('.sub-menu');
+            if ($sub.length && $.contains($sub[0], e.target)) return;
+            var $a = $li.children('a');
+            var href = $a.attr('href');
+            var real = href && href !== '#';
+            var onLink = $(e.target).closest($a).length > 0;
+            if ($(window).width() >= 992) {
+                if (onLink && !real) e.preventDefault();
+                return;
+            }
+            if (!$sub.length) return;
+            var open = $sub.is(':visible') && $sub.height() > 0;
+            if (!open) {
                 e.preventDefault();
-                $(this).data('tapped', true);
+                $li.addClass('sub-open');
+                $sub.stop(true, true).slideDown(250);
+            } else if (!onLink || !real) {
+                e.preventDefault();
+                $li.removeClass('sub-open');
+                $sub.stop(true, true).slideUp(250);
             }
         });
 
@@ -29,18 +45,6 @@
             $('.navbar-expand-lg').toggleClass('expand_close');
         });
 
-        // mobile menu
-        if ($(window).width() < 992) {
-            $(".in-mobile").clone().appendTo(".sidebar-inner");
-            $(".in-mobile ul li.menu-item-has-children").append('<i class="fas fa-chevron-right"></i>');
-            $('<i class="fas fa-chevron-right"></i>').insertAfter("");
-            $(".menu-item-has-children a").on('click', function(e) {
-                // e.preventDefault();
-                $(this).siblings('.sub-menu').animate({
-                    height: "toggle"
-                }, 300);
-            });
-        }
         var menutoggle = $('.menu-toggle');
         var mainmenu = $('.navbar-nav');
         menutoggle.on('click', function() {
