@@ -48,6 +48,8 @@ export const routes = [
   { path: "/servers-storage/", load: () => import('./pages/servers-storage.jsx') },
   { path: "/networking-wifi/", load: () => import('./pages/networking-wifi.jsx') },
   { path: "/education-technology/", load: () => import('./pages/education-technology.jsx') },
+  { path: "/terms-of-use/", load: () => import('./pages/terms-of-use.jsx') },
+  { path: "/privacy-statement/", load: () => import('./pages/privacy-statement.jsx') },
   { path: "/insights/", load: () => import('./pages/insights.jsx') },
   ...insights.map((p) => ({
     path: '/insights/' + p.slug + '/',
