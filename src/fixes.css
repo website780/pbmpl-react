@@ -41,3 +41,7 @@
 .page-title-area.svc-long .title { font-size: 54px; line-height: 1.15; }
 @media (max-width: 991px) { .page-title-area.svc-long .title { font-size: 38px; } }
 @media (max-width: 575px) { .page-title-area.svc-long .title { font-size: 30px; } }
+
+/* Banners that use plain photos: brand tint so the white title stays readable */
+.page-title-area.ban-tint::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: linear-gradient(135deg, rgba(24, 9, 38, .78) 0%, rgba(113, 14, 92, .62) 100%); }
+.page-title-area.ban-tint > .container { position: relative; z-index: 1; }

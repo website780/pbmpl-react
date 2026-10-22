@@ -20,9 +20,9 @@ function Item({ it }) {
   );
 }
 
-export function ServiceBanner({ bg, name, sub, slug, crumbs, long }) {
+export function ServiceBanner({ bg, name, sub, slug, crumbs, long, tint }) {
   return (
-    <div className={'page-title-area overlay-bg style-1' + (long ? ' svc-long' : '')} style={{ backgroundImage: 'url(' + bg + ')' }}>
+    <div className={'page-title-area overlay-bg style-1' + (long ? ' svc-long' : '') + (tint ? ' ban-tint' : '')} style={{ backgroundImage: 'url(' + bg + ')' }}>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-sm-12 text-left">
