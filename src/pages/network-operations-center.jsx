@@ -73,18 +73,6 @@ export const page = {
    "id": "global-styles-inline-css"
   },
   {
-   "href": "/assets/css/plugins/styles.css",
-   "id": "contact-form-7-css"
-  },
-  {
-   "href": "/assets/vendor/metform/assets/libs/cute-alert/style.css",
-   "id": "cute-alert-css"
-  },
-  {
-   "href": "/assets/vendor/metform/assets/libs/text-editor/text-editor.css",
-   "id": "text-editor-style-css"
-  },
-  {
    "href": "/assets/css/fonts.css",
    "id": "pbmpl-google-fonts-local"
   },
@@ -255,10 +243,6 @@ export const page = {
    "src": "/assets/js/plugins/js-index.js"
   },
   {
-   "code": "\nvar wpcf7 = {\n    \"api\": {\n        \"root\": \"\\/wp-json\\/\",\n        \"namespace\": \"contact-form-7\\/v1\"\n    }\n};\n//# sourceURL=contact-form-7-js-before\n",
-   "id": "contact-form-7-js-before"
-  },
-  {
    "src": "/assets/js/plugins/index.js"
   },
   {
@@ -275,22 +259,6 @@ export const page = {
   },
   {
    "src": "/assets/js/wp/element.min.js"
-  },
-  {
-   "src": "/assets/vendor/metform/assets/libs/htm/htm.js"
-  },
-  {
-   "code": "\nvar mf = {\"postType\":\"page\",\"restURI\":\"/wp-json/metform/v1/forms/views/\",\"minMsg1\":\"Minimum length should be \",\"Msg2\":\" character long.\",\"maxMsg1\":\"Maximum length should be \",\"maxNum\":\"Maximum number should be \",\"minNum\":\"Minimum number should be \"};\n//# sourceURL=metform-app-js-extra\n",
-   "id": "metform-app-js-extra"
-  },
-  {
-   "src": "/assets/vendor/metform/build/frontend/app/index.js"
-  },
-  {
-   "src": "/assets/vendor/metform/build/frontend/widget-bootstrap/index.js"
-  },
-  {
-   "src": "/assets/vendor/metform/assets/libs/cute-alert/cute-alert.js"
   },
   {
    "src": "/assets/js/theme/bootstrap.min.js"
@@ -402,7 +370,7 @@ export const page = {
    "src": "/assets/vendor/elementor-pro/js/elements-handlers.min.js"
   }
  ]
-};
+};;
 
 export default function Page_network_operations_center() {
   return (

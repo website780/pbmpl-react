@@ -4,8 +4,8 @@
 
 export const contact = {
   phones: [
-    { label: '93200 67911', href: 'tel:+919320067911' },
-    { label: '98675 09470', href: 'tel:+919867509470' },
+    { label: '+91 22-20811955', href: 'tel:+912220811955' },
+    { label: '+91 98675 09470', href: 'tel:+919867509470' },
   ],
   site: { label: 'www.pbmpl.com', href: 'https://www.pbmpl.com' },
 };

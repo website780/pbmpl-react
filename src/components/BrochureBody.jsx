@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { brochures, flyers } from '../data/brochures';
+import DownloadGate from './DownloadGate';
 import { contact } from '../data/managedServices';
 
-function Card({ item, type }) {
+function Card({ item, type, onPick }) {
   return (
     <div className="bro-card">
       <span className="svc-icon" aria-hidden="true">
@@ -9,7 +11,7 @@ function Card({ item, type }) {
       </span>
       <span className="bro-type">{type}</span>
       <h3 className="bro-title">{item.title}</h3>
-      <a className="svc-btn" href={item.href} target="_blank" rel="noopener noreferrer">
+      <a className="svc-btn" href={item.href} target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); onPick(item, type); }}>
         Download PDF <i className="fa-solid fa-arrow-right" aria-hidden="true" />
       </a>
     </div>
@@ -17,8 +19,11 @@ function Card({ item, type }) {
 }
 
 export default function BrochureBody() {
+  const [picked, setPicked] = useState(null);
+  const pick = (item, type) => setPicked({ item, type });
   return (
     <div className="svc">
+      {picked ? <DownloadGate item={picked.item} type={picked.type} onClose={() => setPicked(null)} /> : null}
       <section className="svc-sec">
         <div className="svc-wrap">
           <div className="svc-head">
@@ -27,7 +32,7 @@ export default function BrochureBody() {
           </div>
           <div className="bro-grid">
             {brochures.map((b) => (
-              <Card key={b.href} item={b} type="Brochure" />
+              <Card key={b.href} item={b} type="Brochure" onPick={pick} />
             ))}
           </div>
         </div>
@@ -41,7 +46,7 @@ export default function BrochureBody() {
           </div>
           <div className="bro-grid">
             {flyers.map((f) => (
-              <Card key={f.href} item={f} type="Flyer" />
+              <Card key={f.href} item={f} type="Flyer" onPick={pick} />
             ))}
           </div>
         </div>

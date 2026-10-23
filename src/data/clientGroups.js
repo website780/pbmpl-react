@@ -352,7 +352,7 @@ export const clients = [
  },
  {
   "name": "NIC",
-  "src": "/assets/images/nic-150x150.png",
+  "src": "/assets/images/nic-logo.webp",
   "group": "Government & PSU",
   "sub": "Central Government"
  },
